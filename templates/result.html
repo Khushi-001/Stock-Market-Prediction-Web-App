@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Stock Prediction Logo">
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#predict">Predict the Future</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="result" class="section">
+        <h2>Prediction Result</h2>
+        <p>Predicted prices for {{ stock_symbol }} over the next {{ days_ahead }} days:</p>
+        <img src="{{ url_for('static', filename='plot.png') }}" alt="Stock Price Prediction Plot">
+        <a href="/" class="back-button">Back to Predict</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 AI-Powered Stock Market Prediction. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
